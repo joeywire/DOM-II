@@ -27,7 +27,6 @@ document.addEventListener('keydown', (event) => {
 })
 
 const headerP = document.querySelector('header p')
-console.log(headerP);
 headerP.addEventListener('dblclick', (event) => {
     event.target.style.fontSize = '20px';
     event.target.style.color = 'navy';
@@ -36,3 +35,15 @@ headerP.addEventListener('dblclick', (event) => {
         event.target.style.color = 'black';
     }, 2000)
 });
+
+
+const contentText = document.querySelector('.content-section p');
+contentText.addEventListener('copy', (event) => {
+    alert('What you doing with my copywriting?? Double click to see me again!')
+    event.target.style.background = 'black';
+});
+
+contentText.addEventListener('dblclick', (event) => {
+    event.target.style.background = 'white';
+})
+
