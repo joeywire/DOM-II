@@ -68,6 +68,9 @@ buttons.forEach(element => {
 
 const contentIMG = document.querySelector('.content-section img'); 
 contentIMG.addEventListener('drag', (event) => {
-    console.log(event);
-    event.target.style.border = '3px solid green';
+    event.target.style.border = '3px dashed coral';
+})
+
+contentIMG.addEventListener('dragend', (event) => {
+    event.target.style.border = '0';
 })
